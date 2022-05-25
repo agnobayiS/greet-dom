@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="simple-grid.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(228, 220, 220);">
+    <div style="background-color: gray; width: 600px;margin: 40px auto;">
+        <div class="container" style="height: 15px;">
+            <div class="row">
+
+                <div class="col-6">
+                    <h1 class="title"> GREETING</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 addBtn" style="height:15px">
+                    <table class="alet">
+                        <tr>
+                            <td class="errorTxt" style="color: darkred;" ></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <form class="input-class">
+
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-6 name-input">
+                        <h3 style="padding-right: 20px;">NAME</h1>
+                            <input class="textBox" style="padding-left: 20px; height: 30px;" type="text" placeholder="Enter name"/>
+                    </div>
+                </div>
+            </div>
+            <div class="container ">
+                <div class="row count" style="align-items: center;">
+                    <div>
+                        <p class="counterHeading" style="color: white;">number of names greeted</p>
+                    </div>
+                    <div class="col-3 numberCount" style="color: white; font-size: larger; padding-left: 50px;">0</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-6 radioBtn">
+    
+                        <P style="color: white;">ENGLISH</P>
+                        <input class="radio" name="btn" type="radio" value="english" />
+    
+    
+                        <P style="color: white; padding-left: 30px;">ISIXHOSA</P>
+                        <input class="radio" name="btn" type="radio" value="isixhosa" />
+    
+                        <P style="color: white; padding-left: 30px">AFRIKAANS</P>
+                        <input class="radio" name="btn" type="radio" value="afrikaans" />
+                    </div>
+                </div>
+            </div>
+
+        </form>
+       
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col addBtn">
+
+                    <button class="greetBtn" type="button" name="button">GREET ME</button>
+                    <table class="TheGreeting">
+                        <tr>
+                            <td class="greetText reject " ></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-6 addBtn">
+
+                    <button class="restBtn" type="button" name="button1">RESET</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./greet.js"></script>
+     <script src="./dom.js"></script>
+</body>
+
+</html>
