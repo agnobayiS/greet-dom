@@ -26,35 +26,35 @@ function greet() {
     erroTxt.innerHTML = " "
 
     if (alphabets.test(name) && radioBtn !== null) {
+        // data.push(name)
         greetTxt.innerHTML = factoryFunction.velidName(name, radioBtn.value)
         localStorage.setItem("key", JSON.stringify(factoryFunction.getArr()));
         counterNumber.innerHTML = factoryFunction.getArr().length;
     } else {
 
         if (radioBtn === null) {
-            greetTxt.innerHTML = "select language"
+            greetTxt.innerHTML = " please select language"
         }
-        // if (alphabets.test(name) && radioBtn !== null)
+
         else if (data.includes(name) && radioBtn !== null) {
 
             greetTxt.innerHTML = factoryFunction.existingName(name, radioBtn.value)
 
         }
         else if (alphabets.test(name) === false && radioBtn !== null) {
-            console.log(!alphabets.test(name))
-            console.log(name)
-            console.log(radioBtn.value);
-            greetTxt.innerHTML = factoryFunction.invelidName(name, radioBtn.value)
 
+            greetTxt.innerHTML = factoryFunction.invelidName(name, radioBtn.value)
+        
         } else {
 
+            // data.push(name)
             greetTxt.innerHTML = factoryFunction.velidName(name, radioBtn.value)
             localStorage.setItem("key", JSON.stringify(factoryFunction.getArr()));
             counterNumber.innerHTML = factoryFunction.getArr().length;
-
+            
         }
     }
-
+    
     formInput.reset()
     setTimeout(() => {
         greetTxt.innerHTML = ''
@@ -74,6 +74,7 @@ resetBtn.addEventListener("click", function () {
     greetTxt.innerHTML = ""
     textBox.innerHTML = "Enter name"
     setTimeout(() => {
+        location.reload()
         erroTxt.innerHTML = ""
     }, "3000")
 

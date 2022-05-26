@@ -1,12 +1,12 @@
 function greeting(data) {
 
 
-    var arr = data
+    var arr = data || []
     var alphabets = /^[a-zA-Z]+$/g;
 
     function existingName(name, language) {
 
-        if (arr.includes(name, language)) {
+        // if (arr.includes(name)) {
             if (language === 'english') {
                 return "Name already exist"
             }
@@ -17,10 +17,10 @@ function greeting(data) {
                 return "Naam bestaan reeds"
             }
 
-        }
+        // }
     }
 
-    function invelidName(name,language) {
+    function invelidName(name, language) {
 
         if (alphabets.test(name) === false) {
             if (language === 'english') {
@@ -32,21 +32,18 @@ function greeting(data) {
 
             }
 
-            else if(language === 'afrikaans') {
+            else if (language === 'afrikaans') {
                 return 'Voer asseblief n naam in'
 
             }
-        } else {
-            return "valid name"
-        }
+        } 
     }
 
 
-    function velidName(name,language) {
+    function velidName(name, language) {
 
         arr.push(name)
-        // localStorage.setItem("key", JSON.stringify(arr));
-
+        
         if (language === 'english') {
             return 'Hello, ' + name
         }
@@ -54,28 +51,30 @@ function greeting(data) {
             return 'Mholo, ' + name
         }
         else if (language === 'afrikaans') {
-
+            
             return 'Hallo, ' + name
-
+            
         }
-
+        
+        // localStorage.setItem("key", JSON.stringify(arr));
 
     }
-    function getArr(){
+    function getArr() {
         return arr
+    }
+    function noLanguage(name, language) {
+        if (language === "" && name == name) {
+            return " please select language"
+        }
     }
 
     return {
+        noLanguage,
         getArr,
         existingName,
         invelidName,
         velidName,
-    
-    
+
+
     }
 }
-
-
-
-
-
