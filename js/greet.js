@@ -1,11 +1,11 @@
 function greeting(data) {
 
-
+    
     var arr = data || []
     var alphabets = /^[a-zA-Z]+$/g;
 
     function existingName(name, language) {
-
+        
         // if (arr.includes(name)) {
             if (language === 'english') {
                 return "Name already exist"
@@ -24,11 +24,11 @@ function greeting(data) {
 
         if (alphabets.test(name) === false) {
             if (language === 'english') {
-                return 'please enter a valid name'
+                return 'Please enter a valid name'
 
             }
             else if (language === 'isixhosa') {
-                return 'nceda ngenisa igama'
+                return 'Nceda ngenisa igama'
 
             }
 
@@ -55,8 +55,6 @@ function greeting(data) {
             return 'Hallo, ' + name
             
         }
-        
-        // localStorage.setItem("key", JSON.stringify(arr));
 
     }
     function getArr() {
@@ -64,7 +62,7 @@ function greeting(data) {
     }
     function noLanguage(name, language) {
         if (language === "" && name == name) {
-            return " please select language"
+            return " Please select language"
         }
     }
 

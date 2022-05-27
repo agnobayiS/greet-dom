@@ -27,3 +27,11 @@
     font:bold;
     font-size: larger;
 }
+.me{
+    display:flex
+
+}
+.btn{
+display: flex;
+align-items: flex-start;
+}

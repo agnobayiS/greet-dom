@@ -19,7 +19,7 @@ var alphabets = /^[a-zA-Z]+$/g;
 counterNumber.innerHTML = data.length;
 
 function greet() {
-    var name = textBox.value;
+    var name = textBox.value.toLowerCase().replace(/^[a-z]{1}/,c=>c.toUpperCase())
 
 
     const radioBtn = document.querySelector('input[name="btn"]:checked');

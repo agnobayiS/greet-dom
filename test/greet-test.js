@@ -3,7 +3,7 @@ describe("The invelid massages",function(){
     it("should display (please enter a valid name) if the are numbers in the name and lanuge is english",function(){
 
         const passedNames = greeting()
-        assert.equal("please enter a valid name",passedNames.invelidName("Siyabonga32","english") )
+        assert.equal("Please enter a valid name",passedNames.invelidName("Siyabonga32","english") )
 
 
 
@@ -12,7 +12,7 @@ describe("The invelid massages",function(){
     it("should display (nceda ngenisa igama) if the are numbers in the name and lanuge is xhosa",function(){
 
         const passedNames = greeting()
-        assert.equal("nceda ngenisa igama",passedNames.invelidName("Siyabonga32","isixhosa") )
+        assert.equal("Nceda ngenisa igama",passedNames.invelidName("Siyabonga32","isixhosa") )
 
 
 
@@ -64,12 +64,12 @@ describe("The Greeting massages",function(){
 
 });
 
-describe("The Greeting massages",function(){
+describe("Select languge massages",function(){
 
     it("should display (please select languge) if the name is passed and the lanuge is not passed",function(){
 
         const passedNames = greeting()
-        assert.equal(" please select language",passedNames.noLanguage("Siyabonga" ,"") )
+        assert.equal(" Please select language",passedNames.noLanguage("Siyabonga" ,"") )
 
 
 
@@ -85,7 +85,7 @@ describe("The invelid massages",function(){
     it("should display (please enter a valid name) if the are numbers in the name and lanuge is english",function(){
 
         const passedNames = greeting()
-        assert.equal("please enter a valid name",passedNames.invelidName("Siyabonga32","english") )
+        assert.equal("Please enter a valid name",passedNames.invelidName("Siyabonga32","english") )
 
 
 
@@ -94,7 +94,7 @@ describe("The invelid massages",function(){
     it("should display (nceda ngenisa igama) if the are numbers in the name and lanuge is xhosa",function(){
 
         const passedNames = greeting()
-        assert.equal("nceda ngenisa igama",passedNames.invelidName("Siyabonga32","isixhosa") )
+        assert.equal("Nceda ngenisa igama",passedNames.invelidName("Siyabonga32","isixhosa") )
 
 
 
